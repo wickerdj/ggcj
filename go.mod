@@ -1,8 +1,11 @@
-module changeme
+module github/wickerdj/ggcj
 
 go 1.18
 
-require github.com/wailsapp/wails/v2 v2.0.0-beta.35
+require (
+	github.com/labstack/gommon v0.3.1
+	github.com/wailsapp/wails/v2 v2.0.0-beta.35
+)
 
 require (
 	github.com/go-ole/go-ole v1.2.6 // indirect
@@ -10,7 +13,6 @@ require (
 	github.com/imdario/mergo v0.3.12 // indirect
 	github.com/jchv/go-winloader v0.0.0-20210711035445-715c2860da7e // indirect
 	github.com/labstack/echo/v4 v4.7.2 // indirect
-	github.com/labstack/gommon v0.3.1 // indirect
 	github.com/leaanthony/go-ansi-parser v1.0.1 // indirect
 	github.com/leaanthony/go-common-file-dialog v1.0.3 // indirect
 	github.com/leaanthony/gosod v1.0.3 // indirect

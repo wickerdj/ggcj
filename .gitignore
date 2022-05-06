@@ -1,6 +1,5 @@
-# If you prefer the allow list template instead of the deny list, see community template:
-# https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
-#
+# Wails
+
 # Binaries for programs and plugins
 *.exe
 *.exe~
@@ -8,14 +7,51 @@
 *.so
 *.dylib
 
-# Test binary, built with `go test -c`
+# Test binary, build with `go test -c`
 *.test
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
-
 # Go workspace file
 go.work
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Build artifacts 
+frontend/dist
+frontend/node_modules/
+
+# Log
+logs
+*.log
+
+
+examples/**/example*
+!examples/**/*.*
+cmd/wails/wails
+.DS_Store
+tmp
+node_modules/
+package.json.md5
+v2/test/**/frontend/dist
+v2/test/**/build/
+v2/test/frameless/icon.png
+v2/test/hidden/icon.png
+v2/test/kitchensink/frontend/public/bundle.*
+v2/pkg/parser/testproject/frontend/wails
+v2/test/kitchensink/frontend/public
+v2/test/kitchensink/build/darwin/desktop/kitchensink
+v2/test/kitchensink/frontend/package.json.md5
+/v2/internal/ffenestri/windows/test/cmake-build-debug/
+!v2/internal/ffenestri/windows/x64/webview2.dll
+!v2/internal/ffenestri/windows/x64/WebView2Loader.dll
+.idea/
+v2/cmd/wails/internal/commands/initialise/templates/testtemplates/
+
+
