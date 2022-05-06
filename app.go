@@ -16,6 +16,11 @@ type App struct {
 	ctx context.Context
 }
 
+type Results struct {
+	Type  string `json:"type"`
+	Value Joke   `json:"value"`
+}
+
 type Joke struct {
 	ID   string `json:"id"`
 	Joke string `json:"joke"`
@@ -35,7 +40,7 @@ func (a *App) GetJoke() Joke {
 	log.Info("get joke")
 
 	client := &http.Client{}
-	url := "http://api.icndb.com/jokes/"
+	url := "http://api.icndb.com/jokes/random"
 	req, err := http.NewRequest("GET", url, nil)
 
 	if err != nil {
@@ -57,11 +62,11 @@ func (a *App) GetJoke() Joke {
 		log.Fatal(err.Error())
 	}
 
-	var responseObject Joke
+	var responseObject Results
 	json.Unmarshal(bodyBytes, &responseObject)
 
-	log.Info("API Reponse as struct %+v\n", responseObject)
+	log.Infof("API Reponse as struct %+v\n", responseObject)
 
-	return responseObject
+	return responseObject.Value
 
 }
