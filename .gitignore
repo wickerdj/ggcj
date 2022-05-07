@@ -25,8 +25,7 @@ go.work
 
 # Build artifacts 
 frontend/dist
-frontend/dist/**
-frontend/node_modules/
+frontend/node_modules
 build
 
 # Log

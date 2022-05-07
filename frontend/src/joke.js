@@ -36,11 +36,10 @@ export class JokeElement extends LitElement {
 
   render() {
     return html`
-      <p>Hi</p>
-      
+      <main>
         <div class="result" id="result">${this.resultText}</div>
         <button @click=${this.getJoke} class="btn">Tell me a joke</button>
-      
+      </main>
   ` 
   }
 }
