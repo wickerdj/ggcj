@@ -5,10 +5,14 @@ import { GetJoke } from "../wailsjs/go/main/App";
 export class JokeElement extends LitElement {
   static get styles() {
     return css `
+    .btn {
+      margin: 1.5rem;
+    }
+    
     .result {
       height: 20px;
       line-height: 20px;
-      margin: 1.5rem auto;
+      margin: 1.5rem;
 
     }
     `
@@ -37,8 +41,9 @@ export class JokeElement extends LitElement {
   render() {
     return html`
       <main>
-        <div class="result" id="result">${this.resultText}</div>
         <button @click=${this.getJoke} class="btn">Tell me a joke</button>
+        <div class="result" id="result">${this.resultText}</div>
+        
       </main>
   ` 
   }
