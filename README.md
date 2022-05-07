@@ -1,8 +1,8 @@
-# README
+# Go Go Chuck Joke (ggcj)
 
 ## About
 
-This is the official Wails Lit template.
+This is a learning project. This project uses [wails](https://wails.io/) to create a desktop app. I am using [Lit](https://lit.dev/) for front end template. Overall, this project was a lot of fun. I am looking for to see how the wails project evolves.
 
 ## Live Development
 
