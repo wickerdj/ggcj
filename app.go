@@ -3,7 +3,6 @@ package main
 import (
 	"context"
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 
 	"net/http"
@@ -31,12 +30,7 @@ func NewApp() *App {
 	return &App{}
 }
 
-// Greet returns a greeting for the given name
-func (a *App) Greet(name string) string {
-	return fmt.Sprintf("Hello %s, It's show time!", name)
-}
-
-func (a *App) GetJoke() Joke {
+func (a *App) GetJoke() string {
 	log.Info("get joke")
 
 	client := &http.Client{}
@@ -67,6 +61,9 @@ func (a *App) GetJoke() Joke {
 
 	log.Infof("API Reponse as struct %+v\n", responseObject)
 
-	return responseObject.Value
+	j := responseObject.Value.Joke
+	log.Infof("joke: %v\n", j)
+
+	return j
 
 }

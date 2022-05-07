@@ -5,7 +5,3 @@
 export function GetJoke() {
   return window['go']['main']['App']['GetJoke']();
 }
-
-export function Greet(arg1) {
-  return window['go']['main']['App']['Greet'](arg1);
-}
